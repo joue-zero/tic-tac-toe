@@ -63,8 +63,8 @@ function App() {
       <main>
         <div id="game-container">
           <ol id="players" className="highlight-player">
-              <Player setPlayers={seyPlayersName} name={players[symbols[0]]} symbol={symbols[0]} isActive={activePlayer === 'x'}/>
-              <Player setPlayers={seyPlayersName} name={players[symbols[1]]} symbol={symbols[1]} isActive={activePlayer === 'o'}/>
+              <Player setPlayers={seyPlayersName} name={players[symbols[0]]} symbol={symbols[0]} isActive={activePlayer === symbols[0]}/>
+              <Player setPlayers={seyPlayersName} name={players[symbols[1]]} symbol={symbols[1]} isActive={activePlayer === symbols[1]}/>
           </ol>
           <GameBoard onSelectSquare={onSelectSquare} gameBoard={gameBoard}/>
           {(winner || isDraw)&& <GameOver winner={winner && playersName[winner]} handleRematch={handleRematch}/>}
